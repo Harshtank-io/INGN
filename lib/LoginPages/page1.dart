@@ -54,6 +54,7 @@ class _GameListState extends State<GameList> {
         if (snapshot.hasData) {
           final games = snapshot.data!;
           return ListView.builder(
+              // scrollDirection: Axis.horizontal,
             controller: _scrollController,
             itemCount: games.length + 1,
             itemBuilder: (context, index) {

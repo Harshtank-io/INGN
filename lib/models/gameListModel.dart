@@ -4,11 +4,13 @@ class Game {
   final String released;
   final String backgroundImage;
 
-  Game({
+
+  Game( {
     required this.id,
     required this.name,
     required this.released,
     required this.backgroundImage,
+
   });
 
   factory Game.fromJson(Map<String, dynamic> json) {
@@ -16,6 +18,7 @@ class Game {
       id: json['id'],
       name: json['name'],
       released: json['released'],
+
       backgroundImage: json['background_image'],
     );
   }
