@@ -25,11 +25,17 @@ class GameCard extends StatelessWidget {
                       fontSize: 18.0,
                     ),
                   ),
+                  // const SizedBox(height: 8.0),
+                  // Text(
+                  //   game.rating ,
+                  //   style: const TextStyle(fontSize: 16.0),
+                  // ),
                   const SizedBox(height: 8.0),
                   Text(
-                    game.released ?? '',
+                    game.released as String,
                     style: const TextStyle(fontSize: 16.0),
                   ),
+
                 ],
               ),
             ),
@@ -38,7 +44,7 @@ class GameCard extends StatelessWidget {
                 width: 200.0,
                 height: 100.0,
                 child: Image.network(
-                  game.backgroundImage!,
+                  game.backgroundImage,
                   fit: BoxFit.cover,
                 ),
               ),

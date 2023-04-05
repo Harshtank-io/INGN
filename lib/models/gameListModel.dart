@@ -1,3 +1,4 @@
+
 class Game {
   final int id;
   final String name;

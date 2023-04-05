@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ingn/LoginPages/page1.dart';
+import 'package:flutter/services.dart';
+import 'package:ingn/Navigation/navigation.dart';
+import 'package:ingn/theme/theme.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +14,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarBrightness: Brightness.light,
+      systemNavigationBarColor: AppColors.dark,
+      systemNavigationBarIconBrightness: Brightness.light,
+    ));
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -25,7 +34,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home:  GameList(),
+      home:  Navigation(),
     );
   }
 }

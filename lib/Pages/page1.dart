@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ingn/LoginPages/gameCard.dart';
+import 'package:ingn/Pages/gameCard.dart';
 import 'package:ingn/models/gameListModel.dart';
 import 'package:ingn/servies/game_service.dart';
 
@@ -12,6 +12,7 @@ class _GameListState extends State<GameList> {
   final ScrollController _scrollController = ScrollController();
   late Future<List<Game>> _gamesFuture;
   int _currentPage = 1;
+  final List<Game> game =[];
 
   @override
   void initState() {
@@ -63,8 +64,8 @@ class _GameListState extends State<GameList> {
                   child: CircularProgressIndicator(),
                 );
               } else {
-                final game = games[index];
-                return GameCard(game: game);
+                final res = games[index];
+                return GameCard(game: res);
               }
             },
           );
