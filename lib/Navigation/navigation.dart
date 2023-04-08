@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ingn/Pages/categories_page.dart';
 import 'package:ingn/Pages/favorite_page.dart';
+import 'package:ingn/Pages/games/GameDetail.dart';
 import 'package:ingn/Pages/home_page.dart';
 import 'package:ingn/Pages/page1.dart';
 import 'package:ingn/theme/theme.dart';
@@ -17,8 +18,8 @@ class _NavigationState extends State<Navigation> {
 
   static final List<Widget> widgetOptions =<Widget>[
     const HomePage(),
-    GameList(),
-    //CategoriesPage(),
+    //GameList(),
+    CategoriesPage(),
     FavouritesPage(),
   ];
 

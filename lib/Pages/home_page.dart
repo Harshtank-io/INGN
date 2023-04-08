@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
+import 'package:ingn/Pages/games/game_page.dart';
 import 'package:ingn/theme/theme.dart';
 
 class HomePage extends StatefulWidget {
@@ -81,7 +82,7 @@ class _HomePageState extends State<HomePage>
                     children: <Widget>[
                       ConstrainedBox(
                         constraints: BoxConstraints.expand(),
-                        //child: GamesPage(),
+                        child: GamesPage(),
                       ),
                       // ConstrainedBox(
                       //   constraints: BoxConstraints.expand(),
@@ -116,25 +117,13 @@ Widget buildMenuBar(BuildContext context) {
               style: ButtonStyle(
                 overlayColor: MaterialStateProperty.all(Colors.transparent),
               ),
-              onPressed: onGamePress,
-              child: Text(
+              onPressed: (){},
+              child: const Text(
                 'Games',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 16.0,
                 ),
-              ),
-            ),
-          ),
-          Expanded(
-            child: TextButton(
-              style: ButtonStyle(
-                overlayColor: MaterialStateProperty.all(Colors.transparent),
-              ),
-              onPressed: onTagPress,
-              child: const Text(
-                'Tags',
-                style: TextStyle(color: Colors.grey, fontSize: 16),
               ),
             ),
           ),

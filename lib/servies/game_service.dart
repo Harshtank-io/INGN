@@ -10,7 +10,7 @@ class GameService {
   final int page = 20;
 
   static Future<List<Game>> getAllGames(int page) async {
-    final response = await http.get(Uri.parse('$_baseUrl/games?key=$_apiKey&page=$page'));
+    final response = await http.get(Uri.parse('$_baseUrl/games?&page_size=200&key=$_apiKey'));
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
       final List<dynamic> gamesData = data['results'];

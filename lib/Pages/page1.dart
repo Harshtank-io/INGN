@@ -60,7 +60,7 @@ class _GameListState extends State<GameList> {
             itemCount: games.length + 1,
             itemBuilder: (context, index) {
               if (index == games.length) {
-                return Center(
+                return const Center(
                   child: CircularProgressIndicator(),
                 );
               } else {
@@ -70,7 +70,7 @@ class _GameListState extends State<GameList> {
             },
           );
         } else if (snapshot.hasError) {
-          return Center(
+          return const Center(
             child: Text('Error loading games'),
           );
         } else {
