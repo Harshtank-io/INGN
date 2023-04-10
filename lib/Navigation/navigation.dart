@@ -4,6 +4,7 @@ import 'package:ingn/Pages/favorite_page.dart';
 import 'package:ingn/Pages/games/GameDetail.dart';
 import 'package:ingn/Pages/home_page.dart';
 import 'package:ingn/Pages/page1.dart';
+import 'package:ingn/Pages/search/search_page.dart';
 import 'package:ingn/theme/theme.dart';
 
 class Navigation extends StatefulWidget {
@@ -18,8 +19,8 @@ class _NavigationState extends State<Navigation> {
 
   static final List<Widget> widgetOptions =<Widget>[
     const HomePage(),
-    //GameList(),
     CategoriesPage(),
+    SearchPage(),
     FavouritesPage(),
   ];
 
@@ -36,18 +37,23 @@ class _NavigationState extends State<Navigation> {
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.home , size: 30,color : selectedIndex == 0 ? AppColors.orange : AppColors.dark ,),
+              icon: Icon(Icons.home , size: 30,color: selectedIndex == 0 ? AppColors.orange : AppColors.darkGrey,),
             label: 'Games',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.category , size: 30,color : selectedIndex == 0 ? AppColors.orange : AppColors.dark ,),
+            icon: Icon(Icons.category , size: 30,color: selectedIndex == 0 ? AppColors.darkGrey : AppColors.orange ,),
             label: 'Categories',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.library_add , size: 30,color : selectedIndex == 0 ? AppColors.orange : AppColors.dark ,),
+            icon: Icon(Icons.search , size: 30,color: selectedIndex == 0 ? AppColors.darkGrey : AppColors.orange ,),
+            label: 'Search',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.library_add , size: 30,color: selectedIndex == 0 ? AppColors.darkGrey: AppColors.orange,),
             label: 'Whishlist',
           ),
         ],
+
         currentIndex: selectedIndex,
         selectedLabelStyle:const TextStyle(
           fontWeight: FontWeight.normal,color: AppColors.orange
@@ -55,6 +61,7 @@ class _NavigationState extends State<Navigation> {
         unselectedLabelStyle: const TextStyle(
           fontWeight: FontWeight.normal,color: AppColors.dark
         ),
+       backgroundColor: AppColors.dark,
         selectedItemColor: AppColors.orange,
         unselectedItemColor: AppColors.darkGrey,
         onTap: iteamTapped,
