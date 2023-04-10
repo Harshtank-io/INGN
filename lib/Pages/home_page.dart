@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ingn/Pages/games/game_page.dart';
 import 'package:ingn/theme/theme.dart';
 
@@ -60,6 +61,7 @@ class _HomePageState extends State<HomePage>
                   child: buildHeader(context),
                 ),
                 buildMenuBar(context),
+                SizedBox(height: 10,),
                 Expanded(
                   flex: 2,
                   child: PageView(
@@ -142,20 +144,13 @@ Widget buildHeader(BuildContext context) {
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
+          children: <Widget>[
             Text(
               'INGN',
-              style: TextStyle(
+              style: GoogleFonts.poppins(
                 color: AppColors.orange,
-                fontSize: 24.0,
-              ),
-            ),
-            SizedBox(width: 10, height: 5.0),
-            Text(
-              'Find your next favorite game',
-              style: TextStyle(
-                color: AppColors.white,
-                fontSize: 14.0,
+                fontWeight: FontWeight.w400,
+                fontSize: 50.0
               ),
             ),
           ],

@@ -44,8 +44,8 @@ class _NavigationState extends State<Navigation> {
             label: 'Categories',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite , size: 30,color : selectedIndex == 0 ? AppColors.orange : AppColors.dark ,),
-            label: 'Favrites',
+            icon: Icon(Icons.library_add , size: 30,color : selectedIndex == 0 ? AppColors.orange : AppColors.dark ,),
+            label: 'Whishlist',
           ),
         ],
         currentIndex: selectedIndex,

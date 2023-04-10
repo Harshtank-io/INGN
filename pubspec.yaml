@@ -31,11 +31,9 @@ dependencies:
   flutter:
     sdk: flutter
   http:
-  equatable:
-  flutter_bloc:
   flutter_spinkit:
-  get_it:
-  cached_network_image: ^3.2.3
+  carousel_slider: ^4.2.1
+  google_fonts: ^4.0.3
 
 
   # The following adds the Cupertino Icons font to your application.
