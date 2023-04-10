@@ -8,6 +8,7 @@ class SearchPage extends StatefulWidget {
 }
 
 class _SearchPageState extends State<SearchPage> {
+  
   final searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
